@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	/*对于单行文本可以使用 text-align 和 line-height 属性水平垂直居中*/
+		p {
+			width: 1000px;
+			height: 200px;
+			background-color: green;
+			text-align: center;
+			line-height: 200px;
+		}
+
+	/*绝对定位解决*/
+		.box {
+			position: relative;
+			width: 200px;
+			height: 200px;
+			background-color: green;
+		}
+		.box .con{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-left:-50px;
+			margin-top: -50px;
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			/*只能用于水平居中
+			margin: 0 auto;*/			
+		}
+		/*绝对定位解决*/
+		.d1 {
+			position: relative;
+			width: 200px;
+			height: 200px;
+			background-color: green;
+		}
+		.d2 {
+			position: absolute;
+			/*左右   上下 配对出现*/
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+		/*绝对定位和 transform解决*/
+		.d7 {
+			position: relative;
+			width: 200px;
+			height: 200px;
+			background-color: green;
+		}
+		.d8 {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform:translate(-50%,-50%);
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+		/*display:flex;*/ 
+		/*ie10,谷歌 火狐 兼容*/
+		.box1 {
+			display: flex;
+			text-align: center;
+			width: 200px;
+			height: 200px;
+			background-color: green;
+		}
+		.box2 {
+			width: 100px;
+			height: 100px;
+			margin: auto;
+			background-color: red;
+		}
+		/*flex解决*/
+		.box3 {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 200px;
+			height: 200px;
+			background-color: green;
+		}
+		.box4 {
+			width: 100px;
+			height: 100px;
+			
+			background-color: red;
+		}
+		/*利用padding值*/
+		.d3 {
+			width: 200px;
+			height: 200px;
+			padding: 50px 50px 50px 50px;
+			background-color: green;
+		}
+		.d4 {
+			width: 200px;
+			height: 200px;
+			background-color: red;
+		}
+
+		/*转换展示类型*/
+
+		.d5 {
+			width: 200px;
+			height: 200px;
+			background-color: green;
+			display: table-cell;
+			/*水平居中*/
+			text-align: center;
+			/*垂直居中*/
+			vertical-align: middle;
+		}
+		.d6 {
+			display: inline-block;
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+		/*利用辅助盒子*/
+		.box5 {
+			width: 200px;
+			height: 200px;
+			background-color: green;
+		}
+		.tip {
+			height: 50%;
+			margin-bottom: -50px;
+			background-color: blue;
+		}
+		.box6 {
+			width: 100px;
+			height: 100px;
+			margin: 0 auto;
+			/*margin-top: -50px;*/
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="con">
+			
+		</div>
+	</div>
+	<div class="d1">
+		<div class="d2">
+			
+		</div>
+	</div>
+	<div class="d3">
+		<div class="d4">
+			
+		</div>
+	</div>
+	<div class="d5">
+		<div class="d6">
+			
+		</div>
+	</div>
+	
+	<p>我要水平垂直居中</p>
+	
+	<div class="d7">
+		<div class="d8">
+			
+		</div>
+	</div>
+	<div class="box1">
+		<div class="box2"></div>
+	</div>
+	<div class="box3">
+		<div class="box4"></div>
+	</div>
+	<div class="box5">
+		<div class="tip">
+			
+		</div>
+		<div class="box6">
+			
+		</div>
+
+	</div>
+</body>
+</html>
